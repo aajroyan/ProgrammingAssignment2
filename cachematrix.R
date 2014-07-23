@@ -1,3 +1,5 @@
+# Here is the function where the mqtrix and its inverse are stored
+
 makeCacheMatrix <- function(x = matrix()) {
     d <- NULL
     set <- function(y) {
@@ -11,6 +13,8 @@ makeCacheMatrix <- function(x = matrix()) {
          setInverse = setInverse,
          getInverse = getInverse)
 }
+
+# the second function that calculates the inverse if not present, and if present, it returns the cached value
 
 cacheSolve <- function(x, ...) {
     i <- x$getInverse()
